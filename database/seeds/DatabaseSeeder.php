@@ -13,7 +13,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // $this->call(UsersTableSeeder::class);
-        DB::table('users')->delete();
+        // DB::table('users')->delete();
 
         $faker = Faker\Factory::create();
 
@@ -40,5 +40,12 @@ class DatabaseSeeder extends Seeder
             $user->password = 'password';
             $user->save();
         }
+
+        $this->call(ProgramStudiSeeder::class);
+        $this->call(InformasiUmumProdiSeeder::class);
+        // $this->call(OrganisasiSeeder::class);
+        // $this->call(versi_cetak_seeder::class);
+        // $this->call(InformasiUmumSeeder::class);
+
     }
 }

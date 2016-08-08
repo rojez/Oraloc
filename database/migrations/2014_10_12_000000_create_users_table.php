@@ -33,7 +33,7 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
-        DB::statement('DROP SEQUENCE USERS_ID_SEQ');
+        // DB::statement('DROP SEQUENCE USERS_ID_SEQ');
 
         Schema::drop('users');
     }

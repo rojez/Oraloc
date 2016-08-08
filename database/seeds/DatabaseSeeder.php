@@ -41,11 +41,9 @@ class DatabaseSeeder extends Seeder
             $user->save();
         }
 
-        $this->call(ProgramStudiSeeder::class);
-        $this->call(InformasiUmumProdiSeeder::class);
-        // $this->call(OrganisasiSeeder::class);
-        // $this->call(versi_cetak_seeder::class);
-        // $this->call(InformasiUmumSeeder::class);
+        $this->call(OrganisasiSeeder::class);
+        $this->call(versi_cetak_seeder::class);
+        $this->call(InformasiUmumSeeder::class);
 
     }
 }

@@ -12,13 +12,13 @@ class VersiCetakTable extends Migration
      */
     public function up()
     {
-        // Schema::create('versi_cetak', function (Blueprint $table) {
-        //     $table->increments('id_versi');
-        //     $table->string('nama_versi');
-        //     $table->integer('id_organisasi');
-        //     $table->string('aktif', 1);
-        //     $table->timestamps();
-        // });
+        Schema::create('versi_cetak', function (Blueprint $table) {
+            $table->increments('id_versi');
+            $table->string('nama_versi');
+            $table->integer('id_organisasi');
+            $table->string('aktif', 1);
+            $table->timestamps();
+        });
     }
 
     /**

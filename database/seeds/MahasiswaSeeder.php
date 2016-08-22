@@ -11,7 +11,7 @@ class MahasiswaSeeder extends Seeder
      */
     public function run()
     {
-        $users = DB::table('tm_user')->take(40)->get();
+        $users = DB::table('tm_user')->get();
 
         $faker = \Faker\Factory::create();
 

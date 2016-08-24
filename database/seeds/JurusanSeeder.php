@@ -11,6 +11,10 @@ class JurusanSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('tr_jurusan')->insert(['kd_jurusan' => '523', 'nama_jurusan' => 'Teknik Informatika']);
+        DB::table('tr_jurusan')->insert([
+            'kd_jurusan' => '523',
+            'nama_jurusan' => 'Teknik Informatika',
+            'gelar' => 'Sarjana Komputer (S.Kom)'
+        ]);
     }
 }

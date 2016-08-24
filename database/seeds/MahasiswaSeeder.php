@@ -35,7 +35,8 @@ class MahasiswaSeeder extends Seeder
                 'tahun_lahir' => $faker->year,
                 'no_seri_ijasah' => $faker->isbn13,
                 'tgl_yudicium' => Carbon\Carbon::now()->subYears(rand(1, 4))->format('Y-m-d'),
-                'ipk_kum' => $faker->randomFloat(2, 3, 4)
+                'ip_kum' => $faker->randomFloat(2, 3, 4),
+                'kd_jurusan' => '523'
             ]);
         }
 

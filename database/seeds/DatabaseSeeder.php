@@ -29,26 +29,32 @@ class DatabaseSeeder extends Seeder
             $user->save();
         }
 
-        foreach (range(1, 10) as $i) {
-            $id = str_pad($i, 3, "0", STR_PAD_LEFT);
+        $groups = ['PRODI', 'FAKULTAS', 'DIREKTORAT_AKADEMIK'];
 
-            $user = new \App\User;
-            $user->user_id = '071234' . $id;
-            $user->group_id = 'DOSEN';
-            $user->name = $faker->name;
-            $user->email = $faker->email;
-            $user->password = 'password';
-            $user->save();
+        foreach ($groups as $key => $group) {
+            $this->createUserByGroup($group, $key + 6);
         }
 
         $this->call(MahasiswaSeeder::class);
         $this->call(JurusanSeeder::class);
         $this->call(EvaluasiSeeder::class);
         $this->call(KonsentrasiSeeder::class);
+    }
 
-        // $this->call(OrganisasiSeeder::class);
-        // $this->call(versi_cetak_seeder::class);
-        // $this->call(InformasiUmumSeeder::class);
+    protected function createUserByGroup($group, $prefix = 7)
+    {
+        $faker = Faker\Factory::create();
 
+        foreach (range(1, 3) as $i) {
+            $id = str_pad($i, 3, "0", STR_PAD_LEFT);
+
+            $user = new \App\User;
+            $user->user_id = '0'. $prefix .'1234' . $id;
+            $user->group_id = $group;
+            $user->name = $faker->name;
+            $user->email = $faker->email;
+            $user->password = 'password';
+            $user->save();
+        }
     }
 }

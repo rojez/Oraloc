@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+// use \DB;
 
 class InformasiUmumTable extends Migration
 {
@@ -14,11 +15,14 @@ class InformasiUmumTable extends Migration
     {
         Schema::create('informasi_umum', function (Blueprint $table) {
             $table->increments('id_inf');
-            $table->string('key_kolom')->unique();
-            $table->string('kode_bhs')->nullable();
-            $table->string('isi')->nullable();
-            $table->integer('id_organisasi');
+            $table->string('key_kolom');
+            $table->string('kd_bhs');
+            $table->string('isi', 3000)->nullable();
+            $table->integer('id_versi');
             $table->timestamps();
+//            $table->primary(['id_versi', 'kd_bhs']);
+            $table->foreign('id_versi')->references('id_versi')->on('versi_cetak');
+
         });
     }
 
@@ -29,6 +33,7 @@ class InformasiUmumTable extends Migration
      */
     public function down()
     {
+        DB::statement('DROP SEQUENCE INFORMASI_UMUM_ID_INF_SEQ');
         Schema::drop('informasi_umum');
     }
 }

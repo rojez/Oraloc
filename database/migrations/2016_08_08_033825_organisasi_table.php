@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+// use \DB;
 
 class OrganisasiTable extends Migration
 {
@@ -32,6 +33,7 @@ class OrganisasiTable extends Migration
      */
     public function down()
     {
+        // DB::statement('DROP SEQUENCE ORGANISASI_ID_ORGANISASI_SEQ');
         Schema::drop('organisasi');
     }
 }

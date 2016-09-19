@@ -14,23 +14,23 @@ class InformasiUmumSeeder extends Seeder
     {
         Informasi_umum::create([
             'key_kolom' => 'bahasa_indonesia',
-            'kode_bhs'	=> 'ind',
+            'kd_bhs'	=> 'ind',
             'isi'		=> 'isi',
-            'id_organisasi'	=> '1',
+            'id_versi'	=> '1',
         ]);
 
         Informasi_umum::create([
             'key_kolom' => 'bahasa_inggris',
-            'kode_bhs'	=> 'sd',
+            'kd_bhs'	=> 'sd',
             'isi'		=> 'isi',
-            'id_organisasi'	=> '1',
+            'id_versi'	=> '1',
         ]);
 
         Informasi_umum::create([
             'key_kolom' => 'bahasa_arab',
-            'kode_bhs'	=> 'sa',
+            'kd_bhs'	=> 'sa',
             'isi'		=> 'isi',
-            'id_organisasi'	=> '1',
+            'id_versi'	=> '1',
         ]);
     }
 }

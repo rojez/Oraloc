@@ -22,14 +22,14 @@ class DatabaseSeeder extends Seeder
 
             $user = new \App\User;
             $user->user_id = '12523' . $id;
-            $user->group_id = 'SISWA';
+            $user->group_id = 'ALUMNI';
             $user->name = $faker->name;
             $user->email = $faker->email;
             $user->password = 'password';
             $user->save();
         }
 
-        $groups = ['PRODI', 'FAKULTAS', 'DIREKTORAT_AKADEMIK'];
+        $groups = ['JURUSAN', 'AKADEMIK', 'DEKAN'];
 
         foreach ($groups as $key => $group) {
             $this->createUserByGroup($group, $key + 6);

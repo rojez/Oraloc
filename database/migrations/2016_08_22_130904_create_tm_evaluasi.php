@@ -17,6 +17,7 @@ class CreateTmEvaluasi extends Migration
             $table->string('kd_konsentrasi', 25);
             $table->string('kd_jurusan', 25);
             $table->string('kd_kurikulum', 25);
+            $table->string('flag_ta')->default('0');
         });
     }
 

@@ -20,7 +20,8 @@ class EvaluasiSeeder extends Seeder
                 'no_mhs' => $student->no_mhs,
                 'kd_jurusan' => $student->kd_jurusan,
                 'kd_konsentrasi' => '01',
-                'kd_kurikulum' => 2010
+                'kd_kurikulum' => 2010,
+                'flag_ta'       => rand('0', '3'),
             ]);
         }
 

@@ -29,7 +29,7 @@ class CapaianKonsentrasiTable extends Migration
      */
     public function down()
     {
-        DB::statement('DROP SEQUENCE CAPAIAN_KONSENTRASI_ID_CAPAIAN_KONS_SEQ');
+        DB::statement('DROP SEQUENCE CAPAIAN_KONSENTRASI_ID_CAPAIAN');
 
         Schema::drop('capaian_konsentrasi');
     }

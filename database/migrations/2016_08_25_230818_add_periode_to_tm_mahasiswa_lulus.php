@@ -13,7 +13,7 @@ class AddPeriodeToTmMahasiswaLulus extends Migration
     public function up()
     {
         Schema::table('tm_mahasiswa_lulus', function (Blueprint $table) {
-            $table->string('periode', 10)->default(1)->nullable();
+            // $table->string('periode', 10)->default(1)->nullable();
         });
     }
 
@@ -25,7 +25,7 @@ class AddPeriodeToTmMahasiswaLulus extends Migration
     public function down()
     {
         Schema::table('tm_mahasiswa_lulus', function (Blueprint $table) {
-            $table->dropColumn('periode');
+            // $table->dropColumn('periode');
         });
     }
 }

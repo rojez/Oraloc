@@ -13,8 +13,8 @@ class AddKdFakKdJurusanToTmUser extends Migration
     public function up()
     {
         Schema::table('tm_user', function (Blueprint $table) {
-            $table->string('kd_fak', 10)->default(52);
-            $table->string('kd_jurusan', 10)->default(523);
+            // $table->string('kd_fak', 10)->default(52);
+            // $table->string('kd_jurusan', 10)->default(523);
         });
     }
 
@@ -26,8 +26,8 @@ class AddKdFakKdJurusanToTmUser extends Migration
     public function down()
     {
         Schema::table('tm_user', function (Blueprint $table) {
-            $table->dropColumn('kd_fak');
-            $table->dropColumn('kd_jurusan');
+            // $table->dropColumn('kd_fak');
+            // $table->dropColumn('kd_jurusan');
         });
     }
 }

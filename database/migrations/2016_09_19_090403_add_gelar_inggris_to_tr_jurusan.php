@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddKdJurusanToTmMahasiswaLulus extends Migration
+class AddGelarInggrisToTrJurusan extends Migration
 {
     /**
      * Run the migrations.
@@ -12,8 +12,8 @@ class AddKdJurusanToTmMahasiswaLulus extends Migration
      */
     public function up()
     {
-        Schema::table('tm_mahasiswa_lulus', function (Blueprint $table) {
-            // $table->string('kd_jurusan', 25)->nullable()->change();
+        Schema::table('tr_jurusan', function (Blueprint $table) {
+            $table->string('gelar_inggris', 25)->nullable();
         });
     }
 
@@ -24,8 +24,8 @@ class AddKdJurusanToTmMahasiswaLulus extends Migration
      */
     public function down()
     {
-        Schema::table('tm_mahasiswa_lulus', function (Blueprint $table) {
-            // $table->dropColumn('kd_jurusan');
+        Schema::table('tr_jurusan', function (Blueprint $table) {
+            $table->dropColumn('gelar_inggris');
         });
     }
 }

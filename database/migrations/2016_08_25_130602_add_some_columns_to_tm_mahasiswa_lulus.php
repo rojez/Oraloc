@@ -14,9 +14,9 @@ class AddSomeColumnsToTmMahasiswaLulus extends Migration
     {
         Schema::table('tm_mahasiswa_lulus', function (Blueprint $table) {
             $table->string('nama_mhs', 50)->nullable();
-            $table->string('kd_fak', 25)->nullable();
-            $table->boolean('flag_posted')->default(0);
-            $table->string('th_akademi', 10)->nullable();
+            // $table->string('kd_fak', 25)->nullable();
+            // $table->boolean('flag_posted')->default(0);
+            // $table->string('th_akademi', 10)->nullable();
         });
     }
 
@@ -29,9 +29,9 @@ class AddSomeColumnsToTmMahasiswaLulus extends Migration
     {
         Schema::table('tm_mahasiswa_lulus', function (Blueprint $table) {
             $table->dropColumn('nama_mhs');
-            $table->dropColumn('kd_fak');
-            $table->dropColumn('flag_posted');
-            $table->dropColumn('th_akademi');
+            // $table->dropColumn('kd_fak');
+            // $table->dropColumn('flag_posted');
+            // $table->dropColumn('th_akademi');
         });
     }
 }

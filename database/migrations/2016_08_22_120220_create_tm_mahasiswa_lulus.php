@@ -14,6 +14,13 @@ class CreateTmMahasiswaLulus extends Migration
     {
         Schema::create('tm_mahasiswa_lulus', function (Blueprint $table) {
             $table->string('no_mhs', 25);
+            $table->string('th_akademi', 50);
+            $table->string('periode', 1);
+            $table->string('smt', 1);
+            $table->string('kd_fak', 10);
+            $table->string('kd_jurusan', 10);
+            $table->string('kd_konsentrasi', 10);
+            $table->string('flag_posted', 1);
             $table->string('tempat_lahir', 50);
             $table->string('tanggal_lahir', 25);
             $table->string('bulan_lahir', 25);
